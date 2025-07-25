@@ -1,6 +1,6 @@
 /**
  * Contact page component with contact information and location details
- * Features contact details, hours, and social media links
+ * Features contact details, hours, and social media links.
  */
 
 import React from 'react'
