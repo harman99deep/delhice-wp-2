@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web-creator:
+    build: .
+    ports:
+      - "5173:5173"  # expose container port to host
+    volumes:
+      - .:/app       # mount current code to /app in container
+      - /app/node_modules # prevent host node_modules from overwriting container's
+    environment:
+      - PORT=5173
+    command: npm run dev

@@ -46,7 +46,7 @@ export default function Contact() {
               <Link to="/contact" className="text-[#B86B6B] font-bold">Contact</Link>
             </div>
             <Button 
-              className="bg-[#B86B6B] hover:bg-red-200 text-white rounded-full px-6"
+              className="bg-[#B86B6B] hover:bg-red-200 text-white rounded-full px-7"
               onClick={() => window.open('tel:+919717295102')}
             >
               <Phone className="h-4 w-4 mr-2" />

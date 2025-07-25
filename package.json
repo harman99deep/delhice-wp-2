@@ -2,7 +2,8 @@
   "name": "web-creator",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node scripts/build.mjs",
+    "start": "npm run dev",
+    "dev": "node scripts/build.mjs --host",
     "build": "node scripts/build.mjs --production"
   },
   "dependencies": {

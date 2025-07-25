@@ -8,6 +8,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        bakeryRed: '#B86B6B',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

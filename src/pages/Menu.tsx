@@ -44,6 +44,7 @@ export default function Menu() {
     }, 100);
   };
 
+  const [activeTab, setActiveTab] = React.useState('bento-cakes');
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #FDF6FB 0%, #FDE8EF 70%, #F9E9F0 100%)' }}>
       {/* Navigation */}
@@ -79,7 +80,7 @@ export default function Menu() {
       {/* Back to Home Link */}
       <div className="pt-24 px-4">
         <div className="container mx-auto">
-          <Link to="/" className="inline-flex items-center text-[#B86B6B] hover:text-red-200 transition-colors mb-8">
+          <Link to="/" className="inline-flex items-center text-[#B86B6B] hover:text-red-200 transition-colors mb-4">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
           </Link>
@@ -87,7 +88,7 @@ export default function Menu() {
       </div>
 
       {/* Menu Header */}
-      <section id="menu" className="py-16 px-4" style={{ background: 'linear-gradient(135deg, #FFF6FA 0%, #FDE8EF 50%, #F9E9F0 100%)' }}>
+      <section id="menu" className="py-0 px-4" style={{ background: 'linear-gradient(135deg, #FFF6FA 0%, #FDE8EF 50%, #F9E9F0 100%)' }}>
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#B86B6B] mb-4">Our Delicious Menu</h2>
@@ -96,11 +97,11 @@ export default function Menu() {
             </p>
           </div>
           
-          <Tabs defaultValue="bento-cakes" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             {/* Tab Navigation Container */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-pink-100 p-4 mb-12">
-              <TabsList className="w-full bg-transparent p-0 h-auto">
-                <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 w-full">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-pink-100 p-1 mb-12">
+              <TabsList className="w-full bg-transparent p-auto h-auto">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 w-full">
                   {/* Row 1: Bento Cakes and Frosted Cakes */}
                   <TabsTrigger 
                     value="bento-cakes" 
@@ -483,12 +484,12 @@ export default function Menu() {
             </div>
             <div className="space-y-4">
               <h4 className="font-semibold text-lg">Specialties</h4>
-              <div className="space-y-2">
-                <Link to="#bento-cakes" className="block text-[#B86B6B] hover:text-white transition-colors">Bento Cakes</Link>
-                <Link to="#frosted-cakes" className="block text-[#B86B6B] hover:text-white transition-colors">Frosted Cakes</Link>
-                <Link to="#cupcakes" className="block text-[#B86B6B] hover:text-white transition-colors">Cupcakes</Link>
-                <button onClick={scrollToOrder} className="block text-[#B86B6B] hover:text-white transition-colors">Custom Orders</button>
-              </div>
+            <div className="space-y-2">
+              <button onClick={() => { setActiveTab('bento-cakes'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block text-[#B86B6B] hover:text-white transition-colors">Bento Cakes</button>
+              <button onClick={() => { setActiveTab('frosted-cakes'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block text-[#B86B6B] hover:text-white transition-colors">Frosted Cakes</button>
+              <button onClick={() => { setActiveTab('cupcakes'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block text-[#B86B6B] hover:text-white transition-colors">Cupcakes</button>
+              <button onClick={scrollToOrder} className="block text-[#B86B6B] hover:text-white transition-colors">Custom Orders</button>
+            </div>
             </div>
             <div className="space-y-4">
               <h4 className="font-semibold text-lg">Connect With Us</h4>

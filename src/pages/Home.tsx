@@ -54,7 +54,7 @@ export default function Home() {
               </h1>
             </div>
             <div className="hidden md:flex space-x-8">
-              <Link to="/" className="text-[#B86B6B] font-bold">Home</Link>
+              <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-[#B86B6B] font-bold">Home</button>
               <Link to="/menu" className="text-red-700 hover:text-[#B86B6B] transition-colors font-medium">Menu</Link>
               <button onClick={scrollToOrder} className="text-red-700 hover:text-[#B86B6B] transition-colors font-medium">Order</button>
               <Link to="/contact" className="text-red-700 hover:text-[#B86B6B] transition-colors font-medium">Contact</Link>
@@ -295,7 +295,7 @@ export default function Home() {
                 <Link to="/menu#bento-cakes" className="block text-[#B86B6B] hover:text-white transition-colors">Bento Cakes</Link>
                 <Link to="/menu#frosted-cakes" className="block text-[#B86B6B] hover:text-white transition-colors">Frosted Cakes</Link>
                 <Link to="/menu#cupcakes" className="block text-[#B86B6B] hover:text-white transition-colors">Cupcakes</Link>
-                <Link to="/#order" className="block text-[#B86B6B] hover:text-white transition-colors">Custom Orders</Link>
+                <Link to="/#order" onClick={scrollToOrder} className="block text-[#B86B6B] hover:text-white transition-colors">Custom Orders</Link>
               </div>
             </div>
             <div className="space-y-4">
