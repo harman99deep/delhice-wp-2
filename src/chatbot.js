@@ -35,7 +35,7 @@ chatInput.addEventListener('keypress', async (e) => {
     }
   }
 });
-// Function to add messages to the chat
+// Function to add messages to the chat.
 function addMessage(sender, message) {
   const msgDiv = document.createElement('div');
   msgDiv.textContent = `${sender}: ${message}`;
