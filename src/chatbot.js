@@ -1,29 +1,44 @@
-document.getElementById("chat-toggle").onclick = () => {
-  const chat = document.getElementById("chat-container");
-  chat.style.display = chat.style.display === "none" ? "block" : "none";
-};
+const chatToggle = document.getElementById('chat-toggle');
+const chatContainer = document.getElementById('chat-container');
+const chatInput = document.getElementById('chat-input');
+const chatMessages = document.getElementById('chat-messages');
 
-document.getElementById("chat-input").addEventListener("keypress", async (e) => {
-  if (e.key === "Enter") {
-    const input = e.target;
-    const message = input.value;
-    if (!message.trim()) return;
-    
-    showMessage("You", message);
-    input.value = "";
+chatToggle.addEventListener('click', () => {
+  chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
+});
 
-    const res = await fetch("/.netlify/functions/chatbot", {
-      method: "POST",
-      body: JSON.stringify({ message }),
-    });
+chatInput.addEventListener('keypress', async (e) => {
+  if (e.key === 'Enter' && chatInput.value.trim() !== '') {
+    const userMsg = chatInput.value.trim();
+    addMessage('You', userMsg);
+    chatInput.value = '';
 
-    const data = await res.json();
-    showMessage("Bot", data.reply);
+    try {
+      const response = await fetch('https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium', {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer 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',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          inputs: {
+            text: userMsg,
+          },
+        }),
+      });
+
+      const result = await response.json();
+      const reply = result.generated_text || "I'm not sure how to respond to that.";
+      addMessage('Bot', reply);
+    } catch (error) {
+      addMessage('Bot', "Sorry, I couldn't connect to Hugging Face.");
+    }
   }
 });
 
-function showMessage(sender, text) {
-  const msg = document.createElement("div");
-  msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
-  document.getElementById("chat-messages").appendChild(msg);
+function addMessage(sender, message) {
+  const msgDiv = document.createElement('div');
+  msgDiv.textContent = `${sender}: ${message}`;
+  chatMessages.appendChild(msgDiv);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }

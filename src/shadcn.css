@@ -107,42 +107,52 @@ html > body * {
   scrollbar-color: hsl(var(--border)) transparent;
 }
 
-#chat-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #333;
-  color: white;
-  border-radius: 50%;
-  padding: 12px 15px;
-  border: none;
-  font-size: 18px;
-}
-
 #chat-container {
-  display: none;
   position: fixed;
-  bottom: 80px;
+  bottom: 60px;
   right: 20px;
+  background: #fff;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  padding: 10px;
   width: 300px;
   max-height: 400px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   overflow-y: auto;
+  display: none;
+  z-index: 1000;
 }
 
 #chat-messages {
-  height: 250px;
+  max-height: 300px;
   overflow-y: auto;
+  font-size: 14px;
   margin-bottom: 10px;
 }
 
 #chat-input {
   width: 100%;
   padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff85a2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 1001;
+}
+#chat-toggle:hover {
+  background-color: #ff5a8c;
+}
+#chat-toggle:focus {
+  outline: none;
 }

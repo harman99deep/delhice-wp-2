@@ -2,29 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Delhice by Sanya Singh | Cakes, Cookies & More</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="96x96">
-    <link rel="icon" href="/logo.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="96x96" />
+    <link rel="icon" href="/logo.png" type="image/png" sizes="96x96" />
+    <link rel="stylesheet" href="main.css" />
   </head>
+
   <script>
-    new EventSource('/esbuild').addEventListener('change', () =>
-      location.reload()
-    )
+    // Auto-reload during development with esbuild
+    new EventSource('/esbuild').addEventListener('change', () => location.reload());
   </script>
+
   <body>
     <div id="app"></div>
     <script src="main.js"></script>
-    <!-- Chat button -->
-    <div id="chat-container">
+
+    <!-- Chatbot UI -->
+    <div id="chat-container" style="display: none;">
       <div id="chat-messages"></div>
       <input type="text" id="chat-input" placeholder="Ask me something..." />
     </div>
 
     <button id="chat-toggle">💬</button>
 
+    <!-- Chatbot script -->
     <script src="chatbot.js"></script>
-    <link rel="stylesheet" href="main.css">  
   </body>
 </html>
