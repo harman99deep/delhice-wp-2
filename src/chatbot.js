@@ -17,7 +17,7 @@ chatInput.addEventListener('keypress', async (e) => {
       const response = await fetch('https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium', {
         method: 'POST',
         headers: {
-          Authorization: '',
+          Authorization: 'Bearer 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',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -35,7 +35,7 @@ chatInput.addEventListener('keypress', async (e) => {
     }
   }
 });
-// Function to add messages to the chat.
+
 function addMessage(sender, message) {
   const msgDiv = document.createElement('div');
   msgDiv.textContent = `${sender}: ${message}`;
