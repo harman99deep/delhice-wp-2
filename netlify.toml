@@ -4,3 +4,14 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = """
+    default-src 'self';
+    connect-src 'self' https://api-inference.huggingface.co;
+    script-src 'self';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data:;
+    """
