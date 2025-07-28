@@ -14,7 +14,7 @@ await rimraf('dist')
  */
 const esbuildOpts = {
   color: true,
-  entryPoints: ['src/main.tsx', 'index.html'],
+  entryPoints: ['src/main.tsx', 'chatbot.js', 'index.html'],
   outdir: 'dist',
   entryNames: '[name]',
   write: true,
