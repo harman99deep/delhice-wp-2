@@ -106,3 +106,43 @@ html > body * {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--border)) transparent;
 }
+
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  border-radius: 50%;
+  padding: 12px 15px;
+  border: none;
+  font-size: 18px;
+}
+
+#chat-container {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+#chat-messages {
+  height: 250px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#chat-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
