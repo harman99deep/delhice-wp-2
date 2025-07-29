@@ -107,8 +107,60 @@ html > body * {
   scrollbar-color: hsl(var(--border)) transparent;
 }
 
-/* Enhanced Chatbot Styles */
+/* Enhanced Image Loading Styles */
+.image-loading {
+  position: relative;
+  overflow: hidden;
+}
 
+.image-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(184, 107, 107, 0.1),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.image-fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-fade-in.loaded {
+  opacity: 1;
+}
+
+.image-error-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fdf6fb 0%, #f9e7ef 100%);
+  color: #B86B6B;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed #B86B6B;
+  border-radius: 8px;
+}
+
+/* Enhanced Chatbot Styles */
 #chatbot-container {
   position: fixed;
   bottom: 20px;
@@ -518,6 +570,74 @@ html > body * {
   }
 }
 
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
 
+.will-change-opacity {
+  will-change: opacity;
+}
 
+/* Preload critical images */
+.preload-image {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
 
+/* Enhanced loading states */
+.skeleton-loading {
+  background: linear-gradient(90deg, 
+    rgba(184, 107, 107, 0.1) 25%, 
+    rgba(184, 107, 107, 0.2) 50%, 
+    rgba(184, 107, 107, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 2s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Image optimization utilities */
+.img-optimized {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.img-blur-up {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.img-blur-up.loaded {
+  filter: blur(0);
+}
+
+/* Better focus states */
+.focus-visible:focus-visible {
+  outline: 2px solid #B86B6B;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for all elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+  #chatbot-container {
+    display: none !important;
+  }
+}
