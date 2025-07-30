@@ -420,7 +420,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">Pack of 4 - ₹800</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="/src/resourcelib/eclairs-choco.png" alt="Eclairs" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="/src/resourcelib/eclairs-choco.jpg" alt="Eclairs" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
 
