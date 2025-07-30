@@ -162,6 +162,7 @@ html > body * {
 
 /* Enhanced Chatbot Styles with Mobile Optimization */
 /* Enhanced Chatbot Styles with Mobile Optimization */
+/* Enhanced Chatbot Styles with Mobile Optimization */
 #chatbot-container {
   position: fixed;
   bottom: 20px;
@@ -559,12 +560,13 @@ html > body * {
   }
   
   #chat-window {
-    width: 95vw;
+    width: 90vw;
     height: 70vh;
-    max-width: 95vw;
+    max-width: 90vw;
     max-height: 500px;
-    right: 2.5vw;
-    left: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
     bottom: 65px;
     border-radius: 16px;
   }
@@ -638,19 +640,21 @@ html > body * {
   .keyboard-open #chat-window {
     height: 45vh !important;
     bottom: 5px !important;
-    right: 5px !important;
-    left: 5px !important;
-    width: calc(100vw - 10px) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: 90vw !important;
     max-height: 350px !important;
   }
 }
 
 @media (max-width: 480px) {
   #chat-window {
-    width: calc(100vw - 10px);
+    width: 85vw;
     height: 75vh;
-    right: 5px;
-    left: 5px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
   
   .quick-actions-grid {

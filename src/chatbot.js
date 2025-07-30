@@ -140,16 +140,18 @@ function adjustChatForKeyboard(keyboardOpen) {
     chatWindow.style.height = '45vh';
     chatWindow.style.bottom = '5px';
     chatWindow.style.maxHeight = '350px';
-    chatWindow.style.right = '5px';
-    chatWindow.style.left = '5px';
-    chatWindow.style.width = 'calc(100vw - 10px)';
+    chatWindow.style.left = '50%';
+    chatWindow.style.right = 'auto';
+    chatWindow.style.transform = 'translateX(-50%)';
+    chatWindow.style.width = '90vw';
   } else {
     chatWindow.style.height = '70vh';
     chatWindow.style.bottom = '65px';
     chatWindow.style.maxHeight = '500px';
-    chatWindow.style.right = '2.5vw';
-    chatWindow.style.left = 'auto';
-    chatWindow.style.width = '95vw';
+    chatWindow.style.left = '50%';
+    chatWindow.style.right = 'auto';
+    chatWindow.style.transform = 'translateX(-50%)';
+    chatWindow.style.width = '90vw';
   }
   
   // Scroll to bottom after adjustment
@@ -323,21 +325,32 @@ function addQuickActionsToChat() {
   quickActionsDiv.innerHTML = `
     <div class="quick-action-title">Quick Questions:</div>
     <div class="quick-actions-grid">
-      ${quickActions.map(action => 
-        `<button class="quick-btn" onclick="handleQuickAction('${action.action}', '${action.query}')">${action.text}</button>`
+      ${quickActions.map((action, index) => 
+        `<button class="quick-btn" data-action="${action.action}" data-query="${action.query}">${action.text}</button>`
       ).join('')}
     </div>
   `;
+  
+  // Add event listeners to each button
+  quickActionsDiv.addEventListener('click', (e) => {
+    if (e.target.classList.contains('quick-btn')) {
+      const action = e.target.getAttribute('data-action');
+      const query = e.target.getAttribute('data-query');
+      handleQuickAction(action, query, e.target);
+    }
+  });
   
   chatMessages.appendChild(quickActionsDiv);
   scrollToBottom();
 }
 
 // Handle quick action clicks with automatic sending
-function handleQuickAction(action, query) {
+function handleQuickAction(action, query, buttonElement) {
   // Find the clicked button and add visual feedback
-  event.target.classList.add('clicked');
-  event.target.style.pointerEvents = 'none';
+  if (buttonElement) {
+    buttonElement.classList.add('clicked');
+    buttonElement.style.pointerEvents = 'none';
+  }
   
   // Remove quick actions with fade effect
   const quickActionsDiv = document.querySelector('.quick-actions-chat');
@@ -353,8 +366,8 @@ function handleQuickAction(action, query) {
   }, 300);
 }
 
-// Make handleQuickAction globally available
-window.handleQuickAction = handleQuickAction;
+// Make handleQuickAction globally available (removed - now using event listeners)
+// window.handleQuickAction = handleQuickAction;
 
 // Event listeners
 chatToggle.addEventListener("click", () => {
