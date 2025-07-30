@@ -171,7 +171,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Choco-Orange</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/bento.png" alt="Chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/bento.png" alt="Chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -202,7 +202,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B] italic">Other flavors available on demand</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/bento-cake.jpg" alt="Non-chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/bento-cake.jpg" alt="Non-chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -238,7 +238,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Choco-Orange</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/choco-cake.png" alt="Chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="https://raw.githubusercontent.com/harman99deep/delhice-wp-2/refs/heads/main/src/resourcelib/Cake-slice-choco.jpg" alt="Chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -269,7 +269,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B] italic">Other flavors available on demand</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/frosted-cake.png" alt="Non-chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/frosted-cake.png" alt="Non-chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -305,7 +305,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Choco-Orange</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/cupcakes-choco.jpg" alt="Chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/cupcakes-choco.jpg" alt="Chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -336,7 +336,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B] italic">Other flavors available on demand</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/vanilla-cupcake.png" alt="Non-chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/vanilla-cupcake.png" alt="Non-chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -368,7 +368,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Oatmeal</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/choco-cookies.jpg" alt="Cookies variety" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/choco-cookies.jpg" alt="Cookies variety" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -396,7 +396,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Lemon Drizzle</span>
                       </div>
                     </div>
-                    <img src="/src/resourcelib/marble-loaf.jpg" alt="Tea cakes variety" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/marble-loaf.jpg" alt="Tea cakes variety" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -410,7 +410,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">600g - ₹1100</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="/src/resourcelib/basque-cheesecake.png" alt="Burnt Basque Cheesecake" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="resourcelib/basque-cheesecake.png" alt="Burnt Basque Cheesecake" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
 
@@ -420,7 +420,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">Pack of 4 - ₹800</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="/src/resourcelib/eclairs-choco.jpg" alt="Eclairs" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="resourcelib/eclairs-choco.jpg" alt="Eclairs" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
 
@@ -430,7 +430,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">450g - ₹1200</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="/src/resourcelib/brownies.png" alt="Fudgy Chocolate Brownies" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="resourcelib/brownies.png" alt="Fudgy Chocolate Brownies" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
 
@@ -440,7 +440,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">500g - ₹1150</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="/src/resourcelib/tiramisu.jpg" alt="Tiramisu" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="resourcelib/tiramisu.jpg" alt="Tiramisu" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
               </div>
