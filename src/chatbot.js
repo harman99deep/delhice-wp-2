@@ -44,7 +44,7 @@ const bakeryContext = {
     ],
     
     order: [
-      "I'd love to help you place an order! 📝 Here's what you need to know:\n• Order 24-48 hours in advance\n• Call us at +91 9717295102\n• Or fill out our order form on the website\n• We'll confirm details and pricing with you\n\nWhat would you like to order?",
+      "I'd love to help you place an order! 📝 Here's what you need to know:\n• Order 24-48 hours in advance\n• Call us at +91 9717295102 \n• Or fill out our order form on the website\n• We'll confirm details and pricing with you\n\nWhat would you like to order?",
       "Placing an order is easy! 🎉 Just give us a call at +91 9717295102 or use our online order form. We need 1-2 days advance notice for fresh preparation."
     ],
     
@@ -53,7 +53,7 @@ const bakeryContext = {
     ],
     
     contact: [
-      "You can reach us easily! 📞\n• Phone: +91 9717295102\n• Email: treats@delhice.com\n• Location: Suncity Arcade, Sec-54, Gurugram\n• Instagram: @delhicebysanyasingh\n• Hours: 11 AM - 6 PM daily\n\nWe're here to help!"
+      "You can reach us easily! 📞\n• Phone: +91 9717295102 \n• Email: treats@delhice.com \n• Location: Suncity Arcade, Sec-54, Gurugram\n• Instagram: @delhicebysanyasingh\n• Hours: 11 AM - 6 PM daily\n\nWe're here to help!"
     ],
     
     flavors: [
@@ -65,7 +65,7 @@ const bakeryContext = {
     ],
     
     delivery: [
-      "We offer delivery services! 🚚\n• Delivery available in Gurugram and nearby areas\n• Charges calculated based on distance\n• Free delivery on orders above ₹2000\n• We ensure safe packaging for fresh delivery\n\nContact us for delivery details to your area!"
+      "We offer delivery services! 🚚\n• Delivery available in Gurugram and nearby areas\n• Charges calculated based on distance\n• We ensure safe packaging for fresh delivery\n\nContact us for delivery details to your area!"
     ],
     
     custom: [
