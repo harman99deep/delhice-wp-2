@@ -328,7 +328,11 @@ function addQuickActionsToChat() {
 
 // Handle quick action clicks with automatic sending
 function handleQuickAction(action, query) {
-  // Remove quick actions immediately
+  // Find the clicked button and add visual feedback
+  event.target.classList.add('clicked');
+  event.target.style.pointerEvents = 'none';
+  
+  // Remove quick actions with fade effect
   const quickActionsDiv = document.querySelector('.quick-actions-chat');
   if (quickActionsDiv) {
     quickActionsDiv.style.opacity = '0.5';
