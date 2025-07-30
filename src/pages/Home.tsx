@@ -44,7 +44,7 @@ export default function Home() {
             <div className="flex items-center space-x-3">
               <div className="w-14 h-14 overflow-hidden rounded-full border-2 border-pink-40">
                 <img
-                  src="src/resourcelib/delhicelogo1.png"
+                  src="/src/resourcelib/delhicelogo1.png"
                   alt="Delhice logo"
                   className="w-full h-full object-cover"
                 />
@@ -116,7 +116,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img 
-                  src="src/resourcelib/hampers.jpg" 
+                  src="/src/resourcelib/hampers.jpg" 
                   alt="Delhice bakery specialties" 
                   className="w-full h-96 object-cover"
                 />
@@ -187,7 +187,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <img 
-                src="src/resourcelib/bento-cake-combo.png" 
+                src="/src/resourcelib/bento-cake-combo.png" 
                 alt="Sanya Singh creating beautiful cakes" 
                 className="w-full h-96 object-cover rounded-3xl shadow-lg"
               />
