@@ -116,7 +116,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                 <img 
-                  src="resourcelib/hampers.jpg" 
+                  src="resourcelib/hampers.png" 
                   alt="Delhice bakery specialties" 
                   className="w-full h-96 object-cover"
                 />

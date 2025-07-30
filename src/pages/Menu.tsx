@@ -238,7 +238,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Choco-Orange</span>
                       </div>
                     </div>
-                    <img src="https://raw.githubusercontent.com/harman99deep/delhice-wp-2/refs/heads/main/src/resourcelib/Cake-slice-choco.jpg" alt="Chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="resourcelib/Cake-slice-choco.jpg" alt="Chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
