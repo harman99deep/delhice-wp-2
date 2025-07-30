@@ -3,11 +3,38 @@ import { rimraf } from 'rimraf'
 import stylePlugin from 'esbuild-style-plugin'
 import autoprefixer from 'autoprefixer'
 import tailwindcss from 'tailwindcss'
+import { copyFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'fs'
+import { join } from 'path'
 
 const args = process.argv.slice(2)
 const isProd = args[0] === '--production'
 
 await rimraf('dist')
+
+// Function to copy directory recursively
+function copyDir(src, dest) {
+  if (!existsSync(dest)) {
+    mkdirSync(dest, { recursive: true })
+  }
+  
+  const entries = readdirSync(src, { withFileTypes: true })
+  
+  for (const entry of entries) {
+    const srcPath = join(src, entry.name)
+    const destPath = join(dest, entry.name)
+    
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath)
+    } else {
+      copyFileSync(srcPath, destPath)
+    }
+  }
+}
+
+// Copy public directory to dist if it exists
+if (existsSync('public')) {
+  copyDir('public', 'dist')
+}
 
 /**
  * @type {esbuild.BuildOptions}
@@ -27,6 +54,11 @@ const esbuildOpts = {
   loader: {
     '.html': 'copy',
     '.png': 'file',
+    '.jpg': 'file',
+    '.jpeg': 'file',
+    '.gif': 'file',
+    '.svg': 'file',
+    '.webp': 'file',
   },
   plugins: [
     stylePlugin({
