@@ -326,22 +326,20 @@ function addQuickActionsToChat() {
   scrollToBottom();
 }
 
-// Handle quick action clicks
+// Handle quick action clicks with automatic sending
 function handleQuickAction(action, query) {
-  // Remove quick actions
+  // Remove quick actions immediately
   const quickActionsDiv = document.querySelector('.quick-actions-chat');
   if (quickActionsDiv) {
-    quickActionsDiv.remove();
+    quickActionsDiv.style.opacity = '0.5';
+    quickActionsDiv.style.pointerEvents = 'none';
+    setTimeout(() => quickActionsDiv.remove(), 200);
   }
   
-  // Add user message
-  appendMessage("user", query);
-  
-  // Add bot response
-  const response = generateResponse(query);
+  // Process the quick action as if user typed it
   setTimeout(() => {
-    appendMessage("bot", response, true);
-  }, 500);
+    processUserInput(query);
+  }, 300);
 }
 
 // Make handleQuickAction globally available
@@ -384,37 +382,40 @@ chatInput.addEventListener("keydown", async (e) => {
   if (e.key === "Enter" && chatInput.value.trim() !== "") {
     e.preventDefault(); // Prevent form submission
     
-    const userMessage = chatInput.value.trim();
-    
-    // Add to history and clear input
-    chatHistory.push(userMessage);
-    appendMessage("user", userMessage);
-    chatInput.value = "";
-    chatInput.disabled = true;
-    
-    // Remove quick actions when user types
-    const quickActionsDiv = document.querySelector('.quick-actions-chat');
-    if (quickActionsDiv) {
-      quickActionsDiv.remove();
-    }
-    
-    try {
-      // Generate contextual response
-      const botResponse = generateResponse(userMessage);
-      appendMessage("bot", botResponse);
-      
-    } catch (error) {
-      console.error("Chat error:", error);
-      appendMessage("bot", "Sorry, I had a little hiccup! 😅 Please try asking again, or call us directly at +91 9717295102 for immediate help!");
-    } finally {
-      chatInput.disabled = false;
-      // Don't auto-focus on mobile to prevent zoom
-      if (!isMobile()) {
-        chatInput.focus();
-      }
-    }
+    await processUserInput(chatInput.value.trim());
   }
 });
+
+// Process user input (shared function for both typing and quick actions)
+async function processUserInput(userMessage) {
+  // Add to history and clear input
+  chatHistory.push(userMessage);
+  appendMessage("user", userMessage);
+  chatInput.value = "";
+  chatInput.disabled = true;
+  
+  // Remove quick actions when user types
+  const quickActionsDiv = document.querySelector('.quick-actions-chat');
+  if (quickActionsDiv) {
+    quickActionsDiv.remove();
+  }
+  
+  try {
+    // Generate contextual response
+    const botResponse = generateResponse(userMessage);
+    appendMessage("bot", botResponse);
+    
+  } catch (error) {
+    console.error("Chat error:", error);
+    appendMessage("bot", "Sorry, I had a little hiccup! 😅 Please try asking again, or call us directly at +91 9717295102 for immediate help!");
+  } finally {
+    chatInput.disabled = false;
+    // Don't auto-focus on mobile to prevent zoom
+    if (!isMobile()) {
+      chatInput.focus();
+    }
+  }
+}
 
 // Prevent zoom on input focus for iOS
 chatInput.addEventListener('focus', (e) => {
