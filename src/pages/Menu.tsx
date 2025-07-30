@@ -171,7 +171,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Choco-Orange</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/602977f7-3137-4fb5-8abe-439bc7ab4914.png" alt="Chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
+                    <img src="./bento.png" alt="Chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -202,7 +202,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B] italic">Other flavors available on demand</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/63a0bb29-fe66-4f05-8a1a-4cbb231ced5d.jpg" alt="Non-chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
+                    <img src="./bento-cake.jpg" alt="Non-chocolate bento cakes" className="w-full h-72 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -238,7 +238,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Choco-Orange</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/15346988-c39d-4f78-80fc-4f4dd4b28298.png" alt="Chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="./choco-cake.png" alt="Chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -269,7 +269,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B] italic">Other flavors available on demand</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/b59d18eb-90ca-4b10-887a-be9a76f69825.png" alt="Non-chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="./frosted-cake.png" alt="Non-chocolate frosted cakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -305,7 +305,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Choco-Orange</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/bf0ab64e-f2f0-488c-aaee-9ed32584d16a.webp" alt="Chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="./cupcakes-choco.jpg" alt="Chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -336,7 +336,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B] italic">Other flavors available on demand</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/04999b5c-6f21-49d3-b69b-8a908825b4f9.png" alt="Non-chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="./vanilla-cupcake.png" alt="Non-chocolate cupcakes" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -368,7 +368,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Oatmeal</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/1f1cb010-f035-4fd5-a4cd-ef906f9fac7d.jpg" alt="Cookies variety" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="./choco-cookies.jpg" alt="Cookies variety" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
 
@@ -396,7 +396,7 @@ export default function Menu() {
                         <span className="text-[#B86B6B]">Lemon Drizzle</span>
                       </div>
                     </div>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/328c1e56-1979-4789-8fed-1b1cf27982d0.webp" alt="Tea cakes variety" className="w-full h-48 object-cover rounded-lg mt-4" />
+                    <img src="./marble-loaf.jpg" alt="Tea cakes variety" className="w-full h-48 object-cover rounded-lg mt-4" />
                   </CardContent>
                 </Card>
               </div>
@@ -410,7 +410,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">600g - ₹1100</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/afba8614-94c6-4a4c-8dee-f0a6a2d0bb1e.png" alt="Burnt Basque Cheesecake" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="./basque-cheesecake.png" alt="Burnt Basque Cheesecake" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
 
@@ -420,7 +420,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">Pack of 4 - ₹800</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/80a08bec-bfac-436e-8903-e09503d06f1b.png" alt="Eclairs" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="./eclairs-choco.png" alt="Eclairs" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
 
@@ -430,7 +430,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">450g - ₹1200</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/3ee6df25-219d-40c9-948f-e0d2a1ab98fd.png" alt="Fudgy Chocolate Brownies" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="./brownies.png" alt="Fudgy Chocolate Brownies" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
 
@@ -440,7 +440,7 @@ export default function Menu() {
                     <CardDescription className="text-[#B86B6B] font-medium">500g - ₹1150</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="https://pub-cdn.sider.ai/u/U0W8H7WZ96Z/web-coder/68778636711d0815fd40acfc/resource/8a838481-3512-4ece-8411-1bdd7a529578.jpg" alt="Tiramisu" className="w-full h-48 object-cover rounded-lg" />
+                    <img src="./tiramisu.jpg" alt="Tiramisu" className="w-full h-48 object-cover rounded-lg" />
                   </CardContent>
                 </Card>
               </div>
