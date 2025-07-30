@@ -54,7 +54,7 @@ export default function Menu() {
             <div className="flex items-center space-x-3">
               <div className="w-14 h-14 overflow-hidden rounded-full border-2 border-pink-40">
                 <img
-                  src="https://ugc.production.linktr.ee/Ah7Bu3bQGygqwhQ9YNSz_IMG_8534.PNG?io=true&size=avatar-v3_0"
+                  src="resourcelib/delhicelogo1.png"
                   alt="Delhice logo"
                   className="w-full h-full object-cover"
                 />
