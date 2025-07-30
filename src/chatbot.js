@@ -140,18 +140,18 @@ function adjustChatForKeyboard(keyboardOpen) {
     chatWindow.style.height = '45vh';
     chatWindow.style.bottom = '5px';
     chatWindow.style.maxHeight = '350px';
-    chatWindow.style.left = '50%';
-    chatWindow.style.right = 'auto';
-    chatWindow.style.transform = 'translateX(-50%)';
-    chatWindow.style.width = '90vw';
+    chatWindow.style.left = '10px';
+    chatWindow.style.right = '10px';
+    chatWindow.style.transform = 'none';
+    chatWindow.style.width = 'calc(100vw - 20px)';
   } else {
     chatWindow.style.height = '70vh';
     chatWindow.style.bottom = '65px';
     chatWindow.style.maxHeight = '500px';
-    chatWindow.style.left = '50%';
-    chatWindow.style.right = 'auto';
-    chatWindow.style.transform = 'translateX(-50%)';
-    chatWindow.style.width = '90vw';
+    chatWindow.style.left = '10px';
+    chatWindow.style.right = '10px';
+    chatWindow.style.transform = 'none';
+    chatWindow.style.width = 'calc(100vw - 20px)';
   }
   
   // Scroll to bottom after adjustment

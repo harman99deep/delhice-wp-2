@@ -161,8 +161,6 @@ html > body * {
 }
 
 /* Enhanced Chatbot Styles with Mobile Optimization */
-/* Enhanced Chatbot Styles with Mobile Optimization */
-/* Enhanced Chatbot Styles with Mobile Optimization */
 #chatbot-container {
   position: fixed;
   bottom: 20px;
@@ -551,6 +549,8 @@ html > body * {
   #chatbot-container {
     bottom: 15px;
     right: 15px;
+    left: auto;
+    position: fixed;
   }
   
   #chat-toggle {
@@ -560,15 +560,16 @@ html > body * {
   }
   
   #chat-window {
-    width: 90vw;
+    width: calc(100vw - 20px);
     height: 70vh;
-    max-width: 90vw;
+    max-width: calc(100vw - 20px);
     max-height: 500px;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    left: 10px;
+    right: 10px;
+    transform: none;
     bottom: 65px;
     border-radius: 16px;
+    position: fixed;
   }
   
   .chat-header {
@@ -583,7 +584,7 @@ html > body * {
   }
   
   .message-content {
-    max-width: 90%;
+    max-width: 85%;
   }
   
   .message-avatar {
@@ -640,21 +641,21 @@ html > body * {
   .keyboard-open #chat-window {
     height: 45vh !important;
     bottom: 5px !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-    width: 90vw !important;
+    left: 10px !important;
+    right: 10px !important;
+    transform: none !important;
+    width: calc(100vw - 20px) !important;
     max-height: 350px !important;
   }
 }
 
 @media (max-width: 480px) {
   #chat-window {
-    width: 85vw;
+    width: calc(100vw - 15px);
     height: 75vh;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    left: 7.5px;
+    right: 7.5px;
+    transform: none;
   }
   
   .quick-actions-grid {
