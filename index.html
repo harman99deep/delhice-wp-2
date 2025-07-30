@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#B86B6B" />
     
     <title>Delhice by Sanya Singh | Cakes, Cookies & More</title>
-    <link rel="icon" href="resourcelib/facivon.png" type="image/png" />
+    <link rel="icon" href="resourcelib/favicon.png" type="image/png" />
     <link href="main.css" rel="stylesheet" />
     
     <!-- Add this script to handle iOS viewport height issues -->
@@ -43,7 +43,15 @@
         </div>
         <div id="chat-messages"></div>
         <div class="chat-input-area">
-          <input type="text" id="chat-input" placeholder="Ask me about our delicious treats..." />
+          <div class="input-container">
+            <input type="text" id="chat-input" placeholder="Ask me about our delicious treats..." />
+            <button id="send-button" title="Send message">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22,2 15,22 11,13 2,9"></polygon>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>

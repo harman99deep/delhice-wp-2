@@ -5,6 +5,7 @@ const chatToggle = document.getElementById("chat-toggle");
 const chatWindow = document.getElementById("chat-window");
 const chatMessages = document.getElementById("chat-messages");
 const chatInput = document.getElementById("chat-input");
+const sendButton = document.getElementById("send-button");
 
 // Mobile detection and viewport handling
 const isMobile = () => window.innerWidth <= 768;
@@ -136,13 +137,19 @@ function adjustChatForKeyboard(keyboardOpen) {
   const chatWindow = document.getElementById('chat-window');
   
   if (keyboardOpen) {
-    chatWindow.style.height = '50vh';
-    chatWindow.style.bottom = '10px';
-    chatWindow.style.maxHeight = '400px';
+    chatWindow.style.height = '45vh';
+    chatWindow.style.bottom = '5px';
+    chatWindow.style.maxHeight = '350px';
+    chatWindow.style.right = '5px';
+    chatWindow.style.left = '5px';
+    chatWindow.style.width = 'calc(100vw - 10px)';
   } else {
     chatWindow.style.height = '70vh';
-    chatWindow.style.bottom = '70px';
+    chatWindow.style.bottom = '65px';
     chatWindow.style.maxHeight = '500px';
+    chatWindow.style.right = '2.5vw';
+    chatWindow.style.left = 'auto';
+    chatWindow.style.width = '95vw';
   }
   
   // Scroll to bottom after adjustment
@@ -385,10 +392,24 @@ chatToggle.addEventListener("click", () => {
 chatInput.addEventListener("keydown", async (e) => {
   if (e.key === "Enter" && chatInput.value.trim() !== "") {
     e.preventDefault(); // Prevent form submission
-    
-    await processUserInput(chatInput.value.trim());
+    await sendMessage();
   }
 });
+
+// Send button click handler
+sendButton.addEventListener("click", async () => {
+  if (chatInput.value.trim() !== "") {
+    await sendMessage();
+  }
+});
+
+// Send message function
+async function sendMessage() {
+  const userMessage = chatInput.value.trim();
+  if (!userMessage) return;
+  
+  await processUserInput(userMessage);
+}
 
 // Process user input (shared function for both typing and quick actions)
 async function processUserInput(userMessage) {
@@ -397,6 +418,7 @@ async function processUserInput(userMessage) {
   appendMessage("user", userMessage);
   chatInput.value = "";
   chatInput.disabled = true;
+  sendButton.disabled = true;
   
   // Remove quick actions when user types
   const quickActionsDiv = document.querySelector('.quick-actions-chat');
@@ -414,6 +436,7 @@ async function processUserInput(userMessage) {
     appendMessage("bot", "Sorry, I had a little hiccup! 😅 Please try asking again, or call us directly at +91 9717295102 for immediate help!");
   } finally {
     chatInput.disabled = false;
+    sendButton.disabled = false;
     // Don't auto-focus on mobile to prevent zoom
     if (!isMobile()) {
       chatInput.focus();
@@ -432,6 +455,13 @@ chatInput.addEventListener('blur', (e) => {
   if (isMobile()) {
     e.target.style.fontSize = '14px'; // Reset to original size
   }
+});
+
+// Enable/disable send button based on input content
+chatInput.addEventListener('input', (e) => {
+  const hasContent = e.target.value.trim().length > 0;
+  sendButton.disabled = !hasContent;
+  sendButton.style.opacity = hasContent ? '1' : '0.5';
 });
 
 // Close chat when clicking outside (mobile)
